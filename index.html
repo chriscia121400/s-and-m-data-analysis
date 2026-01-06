@@ -258,6 +258,18 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
     }
 });
 </script>
+    <script>
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+</script>
+
 
 </body>
 </html>
+
