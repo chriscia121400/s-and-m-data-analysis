@@ -1,275 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>S AND M DATA ANALYSIS SERVICES</title>
-
-<!-- Fonts & Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-
-<style>
-/* Reset */
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
-html, body { scroll-behavior:smooth; background:#f5f7fa; color:#333; }
-
-/* Navbar */
-.navbar {
-    position:fixed; top:0; width:100%; z-index:1000;
-    background:#111; color:#fff;
-    display:flex; justify-content:space-between; align-items:center;
-    padding:15px 30px;
-}
-.nav-left { display:flex; align-items:center; }
-.nav-logo { height:55px; margin-right:10px; }
-.nav-title { font-family:'Montserrat', sans-serif; font-weight:800; font-size:1.5rem; }
-.nav-links { list-style:none; display:flex; gap:20px; }
-.nav-links a { color:white; text-decoration:none; font-weight:600; }
-.nav-links a:hover { color:#22d3ee; }
-
-/* Hero Section */
-.hero-section{
-    height:100vh;
-    background:url('hero-bg.jpg') center/cover no-repeat;
-    display:flex; align-items:center; justify-content:center;
-    position:relative; margin-top:70px;
-}
-.hero-overlay{ position:absolute; inset:0; background:rgba(0,0,0,.5); }
-.hero-content{ position:relative; color:white; text-align:center; max-width:900px; }
-.hero-title{ font-family:'Montserrat',sans-serif; font-size:3.5rem; font-weight:900; margin-bottom:15px; }
-.hero-tagline{ font-size:1.4rem; margin-bottom:20px; }
-.hero-btn{
-    display:inline-block; padding:12px 30px; border-radius:30px;
-    background:#22d3ee; color:#000; font-weight:700; text-decoration:none;
-}
-.hero-btn:hover{ background:#0fa3b1; color:#fff; }
-
-/* Sections */
-section{ padding:80px 20px; max-width:1100px; margin:auto; }
-h2{text-align:center; margin-bottom:40px; font-size:2.2rem; font-weight:700;}
-
-/* About */
-#about p{line-height:1.6; max-width:900px; margin:0 auto;}
-
-/* Profile */
-.profile-container{ max-width:900px; margin:auto; display:flex; flex-direction:column; gap:15px; }
-.profile-logo{ display:flex; align-items:center; gap:15px; background:#1E3A8A; color:white; padding:20px; border-radius:12px; cursor:pointer; transition:background 0.3s;}
-.profile-logo:hover{ background:#283d8a; }
-.profile-logo img{ width:70px; border-radius:50%; }
-.profile-info{ background:white; padding:20px; border-radius:0 0 12px 12px; display:none; }
-.profile-info.open{ display:block; }
-.profile-info p{ margin-bottom:10px; line-height:1.5; }
-
-/* Services */
-.services-container{
-    display:flex; flex-wrap:wrap; gap:20px; justify-content:center;
-}
-.service-card{
-    background:white; padding:25px; width:250px;
-    border-radius:12px; text-align:center;
-    box-shadow:0 6px 15px rgba(0,0,0,.1);
-    transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-.service-card:hover{ transform:translateY(-5px); box-shadow:0 12px 25px rgba(0,0,0,.2); }
-.service-card i{ font-size:2.5rem; color:#1E3A8A; margin-bottom:15px; }
-.service-card h3{ margin-bottom:10px; font-size:1.2rem; font-weight:700; }
-.service-card p{ font-size:0.95rem; color:#555; }
-
-/* Contact Section */
-.contact-wrapper{
-    display:flex; flex-wrap:wrap; gap:40px; justify-content:flex-start; margin-top:50px;
-}
-
-/* Contact Info Clean */
-.contact-info{ background:none; padding:0; box-shadow:none; width:auto; }
-.contact-item{ display:flex; align-items:center; gap:10px; margin-bottom:15px; background:none; padding:0; }
-.contact-item i{ font-size:24px; color:#1E3A8A; }
-.contact-item h4{ margin:0 5px 0 0; font-weight:600; color:#111; }
-.contact-item a{ color:#111; text-decoration:none; transition:color 0.3s; }
-.contact-item a:hover{ color:#1E3A8A; }
-
-/* Contact Form */
-.contact-form-card{
-    background:white; padding:30px; border-radius:12px;
-    box-shadow:0 6px 15px rgba(0,0,0,.15); max-width:450px; width:100%;
-}
-.contact-form-card h3{ margin-bottom:15px; }
-.contact-form-card p{ margin-bottom:20px; line-height:1.5; }
-form{ display:flex; flex-direction:column; gap:15px; }
-input, textarea{
-    padding:12px; border-radius:8px; border:1px solid #ccc; font-size:15px;
-}
-button{
-    background:#1E3A8A; color:white; padding:12px; border:none; border-radius:8px; cursor:pointer; font-size:16px;
-}
-button:hover{ background:#283d8a; }
-
-/* Footer */
-footer{ background:#111; color:white; text-align:center; padding:20px; margin-top:50px; }
-
-/* Responsive */
-@media(max-width:900px){ .contact-wrapper{flex-direction:column;align-items:flex-start;} }
-@media(max-width:600px){ .hero-title{font-size:2.5rem;} .hero-tagline{font-size:1.2rem;} }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S & M Data Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
 
 <!-- Navbar -->
 <nav class="navbar">
     <div class="nav-left">
-        <img src="logo.png" class="nav-logo">
-        <span class="nav-title">S & M</span>
+        <img src="logo.png" alt="Logo" class="nav-logo">
+        <span>S & M Data</span>
     </div>
     <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#profile">Profile</a></li>
+        <li><a href="#hero">Home</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
 <!-- Hero Section -->
-<section class="hero-section">
+<section id="hero" class="hero-section">
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1 class="hero-title">S AND M DATA ANALYSIS SERVICES</h1>
-        <p class="hero-tagline">Mapping Insights, Empowering Decisions</p>
-        <a href="#services" class="hero-btn">Explore Services</a>
+    <div class="hero-content fade-in">
+        <h1 class="hero-title">Welcome to S & M Data Analysis</h1>
+        <p class="hero-tagline">We turn data into insights.</p>
+        <a href="#services" class="hero-btn">Our Services</a>
     </div>
-</section>
-
-<!-- About Section -->
-<section id="about">
-<h2>About Us</h2>
-<p>S AND M DATA ANALYSIS SERVICES specializes in GIS, Digital Twin technology, 3D modeling, and spatial data solutions that empower better decision-making.</p>
 </section>
 
 <!-- Profile Section -->
-<section id="profile">
-<h2>Our Profile</h2>
-<div class="profile-container">
-    <div class="profile-logo" onclick="toggleProfile()">
-        <img src="logo.png">
-        <div>
-            <h3>S & M Data Analysis Services</h3>
-            <p>Agujo, Daanbantayan, Cebu</p>
-        </div>
+<section class="profile-container fade-in">
+    <div class="profile-logo">
+        <img src="profile.jpg" alt="Profile">
+        <h3>S & M Team</h3>
     </div>
-    <div class="profile-info" id="profileInfo">
-        <p><strong>Tagline:</strong> Mapping Insights, Empowering Decisions</p>
-        <p><strong>Mission:</strong> Deliver precise geospatial and 3D data solutions.</p>
-        <p><strong>Vision:</strong> Leading provider of digital twin and GIS services.</p>
+    <div class="profile-info">
+        <p>We specialize in turning raw data into actionable insights for businesses of all sizes.</p>
     </div>
-</div>
 </section>
 
 <!-- Services Section -->
-<section id="services">
-<h2>Our Services</h2>
-<div class="services-container">
-    <div class="service-card">
-        <i class="fas fa-cube"></i>
-        <h3>Digital Twin</h3>
-        <p>Create accurate digital replicas of physical environments for analysis and planning.</p>
+<section id="services" class="services-container">
+    <div class="service-card fade-in">
+        <i class="fas fa-chart-line"></i>
+        <h3>Data Analytics</h3>
+        <p>We provide deep analytics to help your business grow.</p>
     </div>
-    <div class="service-card">
-        <i class="fas fa-map"></i>
-        <h3>3D GIS Modeling</h3>
-        <p>Transform spatial data into interactive 3D visualizations for urban planning and analysis.</p>
+    <div class="service-card fade-in">
+        <i class="fas fa-database"></i>
+        <h3>Database Management</h3>
+        <p>Efficient management of your valuable data assets.</p>
     </div>
-    <div class="service-card">
-        <i class="fas fa-walking"></i>
-        <h3>Walkway Simulation</h3>
-        <p>Simulate pedestrian movement to improve safety, efficiency, and design performance.</p>
+    <div class="service-card fade-in">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Insights</h3>
+        <p>Actionable insights that drive real business results.</p>
     </div>
-    <div class="service-card">
-        <i class="fas fa-chart-bar"></i>
-        <h3>Data Analysis</h3>
-        <p>Analyze geospatial and statistical data to uncover trends and insights for decisions.</p>
-    </div>
-</div>
+</section>
+
+<!-- Why Choose Us -->
+<section id="why" class="fade-in">
+    <h2>Why Choose Us</h2>
+    <p>We provide <span>fast</span>, <span>reliable</span>, and <span>affordable</span> services that meet your needs perfectly.</p>
 </section>
 
 <!-- Contact Section -->
-<section id="contact">
-<h2>Contact Us</h2>
-<div class="contact-wrapper">
-
-    <!-- Contact Info -->
-    <div class="contact-info">
-        <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <div><h4>Email:</h4><a href="mailto:s&mdataanalysisservices@gmail.com">s&mdataanalysisservices@gmail.com</a></div>
-        </div>
+<section id="contact" class="contact-wrapper">
+    <div class="contact-info fade-in">
         <div class="contact-item">
             <i class="fas fa-phone"></i>
-            <div><h4>Phone:</h4><a href="tel:+63123456789">+63 123 456 789</a></div>
+            <h4>Phone:</h4> <a href="tel:+1234567890">+1 234 567 890</a>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <h4>Email:</h4> <a href="mailto:info@sandm.com">info@sandm.com</a>
         </div>
         <div class="contact-item">
             <i class="fas fa-map-marker-alt"></i>
-            <div><h4>Location:</h4><a href="https://www.google.com/maps/search/Agujo+Daanbantayan+Cebu" target="_blank">Agujo, Daanbantayan, Cebu</a></div>
+            <h4>Address:</h4> 123 Data St., Analytics City
         </div>
     </div>
-
-    <!-- Contact Form -->
-    <div class="contact-form-card">
-        <h3>Reach Out to Us</h3>
-        <p>Contact us for tailored solutions that suit your business needs. We look forward to discussing how we can best support you.</p>
-        <form id="contactForm">
+    <div class="contact-form-card fade-in">
+        <h3>Contact Us</h3>
+        <p>Send us a message and we’ll get back to you soon!</p>
+        <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
             <button type="submit">Send Message</button>
-            <div id="formMessage"></div>
         </form>
     </div>
-
-</div>
 </section>
 
 <!-- Footer -->
 <footer>
-© 2026 S AND M DATA ANALYSIS SERVICES. All Rights Reserved.
+    &copy; 2026 S & M Data Analysis. All rights reserved.
 </footer>
 
-<!-- JS -->
+<!-- JS Scripts -->
 <script>
-function toggleProfile(){
-    const info = document.getElementById('profileInfo');
-    info.classList.toggle('open');
-}
+    // Fade-in scroll effect
+    const faders = document.querySelectorAll('.fade-in, .hero-content, .service-card, .contact-form-card');
 
-/* Contact Form */
-document.getElementById('contactForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const name = this.querySelector('input[type="text"]').value.trim();
-    const email = this.querySelector('input[type="email"]').value.trim();
-    const message = this.querySelector('textarea').value.trim();
-    const formMessage = document.getElementById('formMessage');
-    if(name && email && message){
-        formMessage.style.color='green';
-        formMessage.textContent='Thank you! Your message has been sent.';
-        this.reset();
-    }else{
-        formMessage.style.color='red';
-        formMessage.textContent='Please fill out all fields.';
-    }
-});
-</script>
-    <script>
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-    if(window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-</script>
+    const appearOptions = {
+        threshold: 0.2
+    };
 
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) return;
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
 
 </body>
 </html>
-
